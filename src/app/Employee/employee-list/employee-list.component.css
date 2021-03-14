@@ -1,0 +1,69 @@
+.table-data{
+  
+        font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    border-right: 1px solid #F2F2F2;
+    color: #4C4C4C;
+}
+
+.table-search{
+width: 30%;
+}
+
+.mat-column-update {
+    word-wrap: break-word !important;
+    white-space: unset !important;
+        width: 6% !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    padding-left: 1% !important;
+    padding-right: 1% !important;
+}
+
+
+.add-new-btn{
+    background: #2F80ED;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    height:60%;
+    line-height: 16px;
+    font-size: 14px;
+    letter-spacing: 0.75px;
+    color: #FFFFFF;
+    float: right;
+    margin-left:20px;
+    margin-top:10px 
+}
+
+.edit-btn{
+    border: 2px solid #2F80ED;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    height:60%;
+    line-height: 16px;
+    font-size: 14px;
+    letter-spacing: 0.75px;
+    padding:5px ;
+    color:#2F80ED
+}
+
+.table-header{
+    text-align: center;
+}
+
+.employee-not-found{
+width: 100%;
+text-align: center;
+margin: 20px;
+padding: 10px;
+}

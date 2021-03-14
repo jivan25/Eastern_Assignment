@@ -1,0 +1,84 @@
+<p style="margin-top: 60px;"></p>
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-10">
+    <div class="row"><h1><strong>Employee List</strong></h1></div>
+    <div class="row employee-lable-row">
+      <div class="col-9">
+        <mat-form-field class="table-search">
+          <input matInput #value placeholder="Search" (keyup)='searchValue(value.value)'>
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <button (click)="addEmployee()" mat-button class="add-new-btn">
+         ADD NEW Employee
+         </button>
+      </div>
+    </div>
+
+    <div class="employee-not-found alert alert-danger" *ngIf='dataSource.length==0;else showTable'>
+      No Employee Found
+    </div>
+    <ng-template #showTable>
+    <table mat-table [dataSource]="dataSource" style="width: 100%;"  class="mat-elevation-z8">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell class="table-header" *matHeaderCellDef >  ID </th>
+        <td mat-cell class="table-data" *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell class="table-header" *matHeaderCellDef >  Name </th>
+        <td mat-cell class="table-data" *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+     
+      <ng-container class="table-header" matColumnDef="phone">
+        <th mat-header-cell class="table-header" *matHeaderCellDef >Phone </th>
+        <td mat-cell class="table-data" *matCellDef="let element">
+        <ng-container *ngIf="isNumber(element.phone);else showNA">
+          {{element.phone}} 
+     
+        </ng-container>  
+        <ng-template #showNA>
+          NA
+        </ng-template>
+      </td>
+      </ng-container>
+
+      <ng-container matColumnDef="city">
+        <th mat-header-cell class="table-header" *matHeaderCellDef > City </th>
+        <td mat-cell class="table-data" *matCellDef="let element">
+         {{element.address.city}}
+        </td>
+      </ng-container>
+      <ng-container class="table-header" matColumnDef="address1">
+        <th mat-header-cell class="table-header" *matHeaderCellDef > Address1</th>
+        <td mat-cell class="table-data" *matCellDef="let element"> {{element.address.address_line1}} </td>
+      </ng-container>
+      <ng-container class="table-header" matColumnDef="address2">
+        <th mat-header-cell class="table-header" *matHeaderCellDef > Address2</th>
+        <td mat-cell class="table-data" *matCellDef="let element"> {{element.address.address_line2}} </td>
+      </ng-container>
+      <ng-container class="table-header" matColumnDef="postal">
+        <th mat-header-cell class="table-header" *matHeaderCellDef > Postal Code</th>
+        <td mat-cell class="table-data" *matCellDef="let element"> {{element.address.postal_code}} </td>
+      </ng-container>
+       <ng-container matColumnDef="update">
+        <th mat-header-cell *matHeaderCellDef> EDIT </th>
+        <td mat-cell class="table-data" *matCellDef="let element">
+          <span>
+            <button (click)="editEmployee(element.id)" mat-button class="edit-btn">
+              EDIT
+              </button>
+          </span>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    </ng-template>
+  </div>
+  <div class="col-1"></div>
+</div>
+

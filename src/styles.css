@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+html, body { height: 100%; 
+    overflow-x: hidden;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button:focus, button:active:focus, button.active:focus {
+    outline: none !important;
+    outline-style: none !important;
+}
+
+.employee-lable-row{
+    margin-top: 20px;
+}
+
+.add-update-dialog .mat-dialog-container{
+    padding: 0px !important;
+    overflow: hidden;
+}
+

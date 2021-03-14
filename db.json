@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "phone": "9999999999",
+      "name": "Jhon",
+      "address": {
+        "city": "Pune",
+        "address_line1": "ABC road",
+        "address_line2": "sd",
+        "postal_code": "12455"
+      },
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Jacob",
+      "phone": "AZ99A99PQ9",
+      "address": {
+        "city": "Pune",
+        "address_line1": "PQR road",
+        "address_line2": "ABC building",
+        "postal_code": "13455"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Ari",
+      "phone": "145458522",
+      "address": {
+        "city": "Mumbai",
+        "address_line1": "ABC road",
+        "address_line2": "XYZ building",
+        "postal_code": "12455"
+      }
+    },
+    {
+      "phone": "9999999999",
+      "name": "Jivan Shelke",
+      "address": {
+        "city": "Buldhana",
+        "address_line1": "Warje",
+        "address_line2": "near RMD",
+        "postal_code": "443201"
+      },
+      "id": 4
+    }
+  ]
+}
